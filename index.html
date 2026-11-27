@@ -13,6 +13,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,500..900&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+<style>
+.stamp svg.tool{position:relative;inset:auto;width:46px;height:46px;animation:wiggle 3s ease-in-out infinite}
+@keyframes wiggle{0%,60%,100%{transform:rotate(0)}70%{transform:rotate(-18deg)}80%{transform:rotate(14deg)}90%{transform:rotate(-8deg)}}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;max-width:760px;margin:2.5rem auto 0;text-align:left}
+.card{display:flex;align-items:center;gap:1rem;padding:1rem 1.25rem;border:2px solid rgba(255,255,255,.25);border-radius:14px;background:rgba(255,255,255,.05);color:#fff;text-decoration:none;transition:transform .2s,border-color .2s,background .2s}
+.card:hover{transform:translateY(-3px);border-color:#f5b700;background:rgba(245,183,0,.1)}
+.card>svg{flex:none;width:46px;height:46px;padding:11px;border-radius:50%;background:#f5b700;fill:none;stroke:#14301e;stroke-width:2}
+.card span{min-width:0}
+.card small{display:block;color:#a9b9ae;font-size:.78rem;text-transform:uppercase;letter-spacing:.1em}
+.card b{display:block;font-weight:700;font-size:.95rem;overflow-wrap:anywhere}
+</style>
 </head>
 <body>
 
@@ -44,7 +55,7 @@
   </div>
   <div class="hero-photo">
     <img src="pia.jpg" alt="Instalação de pia de cozinha com cuba de inox" width="718" height="712">
-    <div class="stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><path id="c" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0" fill="none"/><text><textPath href="#c">atendimento rápido • preço justo • serviço garantido •</textPath></text></svg><b>34</b></div>
+    <div class="stamp" aria-hidden="true"><svg viewBox="0 0 120 120"><path id="c" d="M60 60 m-46 0 a46 46 0 1 1 92 0 a46 46 0 1 1 -92 0" fill="none"/><text><textPath href="#c">atendimento rápido • preço justo • serviço garantido •</textPath></text></svg><svg class="tool" viewBox="0 0 24 24" fill="none" stroke="#14301e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
   </div>
 </section>
 
@@ -129,10 +140,16 @@
     <h2>Precisa de um reparo? Fale agora com o Renilson.</h2>
     <p class="lead">Atendimento em Uberaba e região.</p>
     <a class="btn btn-big" href="https://wa.me/5534984112655?text=Ol%C3%A1%2C%20Renilson!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." target="_blank" rel="noopener">WhatsApp (34) 98411-2655</a>
-    <ul class="info">
-      <li><a href="mailto:masterservicereparosuberaba@hotmail.com">masterservicereparosuberaba@hotmail.com</a></li>
-      <li><a href="https://www.instagram.com/maridodealuguelmasterservice/" target="_blank" rel="noopener">@maridodealuguelmasterservice</a></li>
-    </ul>
+    <div class="cards">
+      <a class="card" href="https://www.instagram.com/maridodealuguelmasterservice/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>
+        <span><small>Instagram</small><b>@maridodealuguelmasterservice</b></span>
+      </a>
+      <a class="card" href="mailto:masterservicereparosuberaba@hotmail.com">
+        <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        <span><small>E-mail</small><b>masterservicereparosuberaba@hotmail.com</b></span>
+      </a>
+    </div>
   </div>
 </section>
 </main>
